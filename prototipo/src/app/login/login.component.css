@@ -1,0 +1,10 @@
+.form-edit {
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 25%;
+    text-align: center;
+}
+
+#btn-edit {
+    background-color: purple;
+}
