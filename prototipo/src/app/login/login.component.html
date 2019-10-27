@@ -15,14 +15,14 @@
           <img src="/src/assets/imagens/instagram-logo.jpg" width="30%" height="30%" class="rounded mx-auto d-block" alt="Imagem do login">
       </div>
       <div class="form-edit">
-        <form action="" method="post">
+        <form [formGroup]="usuarioForm" (submit)="validUser()">
           <div class="form-group">
-            <input type="email" class="form-control" id="Iemail" name="Nemail" placeholder="Endereço de email">
+            <input type="email" formControlName="email" class="form-control" id="Iemail" name="Nemail" placeholder="Endereço de email">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" id="Isenha" name="Nsenha" placeholder="Senha">
+            <input type="password" formControlName="senha" class="form-control" id="Isenha" name="Nsenha" placeholder="Senha">
           </div>
-          <button type="submit" id="btn-edit" class="btn btn-primary btn-lg">Entrar</button>
+          <button type="submit" [disabled]="usuarioForm.invalid" id="btn-edit" class="btn btn-primary btn-lg">Entrar</button>
         </form>
       </div> 
     </div>   

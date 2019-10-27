@@ -1,0 +1,15 @@
+.form-edit {
+    width: 50%;
+    margin-top: 6%;
+    margin-left: 25%;
+    text-align: center;
+}
+
+.title {
+    width: 50%;
+    margin-top: 4%;
+    font-size: 200%;
+    margin-left: 25%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}

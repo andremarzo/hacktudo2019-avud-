@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Cadastro de usuario</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <p>Cadastro de usuários</p>
+      </div>
+      <form [formGroup]="usuarioForm" class="form-edit" (submit)="cadUser()">
+        <div class="form-group">
+          <input type="text" formControlName="nome" class="form-control" name="Nnome" id="Inome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="sobrenome" class="form-control" name="Nsobrenome" id="Isobrenome" placeholder="Sobrenome">
+        </div>
+        <div class="form-group">
+          <input type="email" formControlName="email" class="form-control" name="Nemail" id="Iemail" placeholder="Endereço de email">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="cpf" class="form-control" name="Ncpf" id="Icpf" placeholder="123.456.789-12">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="turma" class="form-control" name="Nturma" id="Iturma" placeholder="Turma">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="empresa" class="form-control" name="Nempresa" id="Iempresa" placeholder="Empresa">
+        </div>
+        <!--<div class="form-group">
+          <input type="password" formControlName="senha" class="form-control" name="Nsenha" id="Isenha" placeholder="Senha">
+        </div> --> 
+        <button type="submit" [disabled]="usuarioForm.invalid" class="btn btn-primary btn-block">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

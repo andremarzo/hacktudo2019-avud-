@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ServicesService } from '../services/services.service';
 import { Escolas } from '../model/Escolas';
 
@@ -7,22 +7,27 @@ import { Escolas } from '../model/Escolas';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
   escolas: Escolas;
   totalArrecadado: number;
+  random = 1;  
 
   constructor(private service: ServicesService) { }
 
-  ngOnInit() {
-
+  ionViewWillEnter(): void {
+    this.listaEscolas();
   }
 
-  /*listaEscolas() {
+  listaEscolas() {
     this.service.getEscolas().subscribe(
       escolaDB => this.escolas = escolaDB,
       errorDB => console.log(errorDB)
     );
-  }*/
+  }  
+
+  while(listaEscolas) {
+      this.random = this.random + 1;
+  }
 
 }
