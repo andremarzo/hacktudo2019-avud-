@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
+var cors = require('cors')
 
 //Rotas
 const index = require('./routes/index');
@@ -15,5 +16,6 @@ app.use(bodyParser.json());
 //detecta todas as rotas na pasta routes
 app.use('/', index);
 
+app.use(cors())
 
 module.exports = app;
