@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../services/services.service';
 import { Escolas } from '../model/Escolas';
 
@@ -7,7 +7,7 @@ import { Escolas } from '../model/Escolas';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
 
   escolas: Escolas;
   totalArrecadado: number;
@@ -16,6 +16,10 @@ export class DashboardComponent {
   constructor(private service: ServicesService) { }
 
   ionViewWillEnter(): void {
+    this.listaEscolas();
+  }
+
+  ngOnInit(){
     this.listaEscolas();
   }
 
