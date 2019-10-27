@@ -1,6 +1,6 @@
 'use strict';
 
-const EmpresasRepository = require('../repositories/EmpresasRepository');
+const EmpresasRepository = require('../repositories/empresasRepository');
 
 
 exports.get = (req, res) => {

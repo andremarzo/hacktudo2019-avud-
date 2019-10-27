@@ -1,6 +1,6 @@
 'use strict';
 
-const TurmasRepository = require('../repositories/TurmasRepository');
+const TurmasRepository = require('../repositories/turmasRepository');
 
 
 exports.get = (req, res) => {
