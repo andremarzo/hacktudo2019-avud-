@@ -17,5 +17,6 @@ app.use(bodyParser.json());
 app.use('/', index);
 
 app.use(cors())
+app.options('*', cors());
 
 module.exports = app;
